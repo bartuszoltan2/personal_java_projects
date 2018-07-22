@@ -1,18 +1,15 @@
 package looselyCoupledOODesigns;
 
-public class PizzaStore {
-	SimplePizzaFactory factory;
 
-	public PizzaStore(SimplePizzaFactory factory) {
-		super();
-		this.factory = factory;
-	}
 
+public abstract class PizzaStore {
+	
+	
 	
 	public Pizza orderPizza (String type) {
 		Pizza pizza;
 		
-		pizza=factory.createPizza(type);
+		pizza=createPizza(type);
 		
 		pizza.prepare();
 		pizza.bake();
@@ -22,5 +19,7 @@ public class PizzaStore {
 		return pizza;
 		
 	}
+	
+	abstract Pizza createPizza(String type);
 	
 }
