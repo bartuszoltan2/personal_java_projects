@@ -1,5 +1,5 @@
 package looselyCoupledOODesigns;
 
-public class NYStyleVeggiePizza extends VeggiePizza {
+public class NYStyleVeggiePizza extends Pizza {
 
 }

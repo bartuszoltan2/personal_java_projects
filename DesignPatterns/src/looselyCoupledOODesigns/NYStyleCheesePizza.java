@@ -1,7 +1,7 @@
 package looselyCoupledOODesigns;
 
 
-public class NYStyleCheesePizza extends CheesePizza {
+public class NYStyleCheesePizza extends Pizza {
 
 	public NYStyleCheesePizza() {
 		name="NY Style Sauce and Cheese Pizza";
