@@ -4,16 +4,20 @@ public class ChocolateBoiler {
 	private boolean empty;
 	private boolean boiled;
 
-	private static ChocolateBoiler uniqueInstance;
+	private volatile static ChocolateBoiler uniqueInstance;
 
 	private ChocolateBoiler() {
 		empty = true;
 		boiled = false;
 	}
 
-	private static ChocolateBoiler getInstance() {
+	public static ChocolateBoiler getInstance() {
 		if (uniqueInstance == null) {
-			uniqueInstance = new ChocolateBoiler();
+			synchronized (ChocolateBoiler.class) {
+				if (uniqueInstance == null) {
+					uniqueInstance = new ChocolateBoiler();
+				}
+			}
 		}
 		return uniqueInstance;
 	}
