@@ -1,10 +1,10 @@
 package command;
 
-public class CeilingFanHighCommand implements Command {
+public class CeilingFanLowCommand implements Command {
 	CeilingFan ceilingFan;
 	int prevSpeed;
 	
-	public CeilingFanHighCommand(CeilingFan ceilingFan) {
+	public CeilingFanLowCommand(CeilingFan ceilingFan) {
 		this.ceilingFan = ceilingFan;
 
 	
@@ -13,10 +13,9 @@ public class CeilingFanHighCommand implements Command {
 	@Override
 	public void execute() {
 		prevSpeed=ceilingFan.getSpeed();
-		ceilingFan.high();
+		ceilingFan.low();
 	}
 
-	
 	public void undo() {
 
 		if(prevSpeed==CeilingFan.HIGH) {

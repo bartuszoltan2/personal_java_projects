@@ -13,22 +13,27 @@ public class CeilingFan {
 		this.location = location;
 		speed=OFF;
 		
+		
 	}
 
 	public void high() {
 		speed=HIGH;
+		System.out.println("Ceiling fan on high speed.");
 	}
 	
 	public void medium() {
 		speed=MEDIUM;
+		System.out.println("Ceiling fan on medium speed.");
 	}
 	
 	public void low() {
 		speed=LOW;
+		System.out.println("Ceiling fan on low speed.");
 	}
 	
 	public void off() {
 		speed=OFF;
+		System.out.println("Ceiling fan off.");
 	}
 
 	public int getSpeed() {

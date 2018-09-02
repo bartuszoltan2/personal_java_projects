@@ -13,7 +13,6 @@ public class GarageDoorCloseCommand implements Command {
 
 	}
 
-	@Override
 	public void undo() {
 		garageDoor.open();
 	}
