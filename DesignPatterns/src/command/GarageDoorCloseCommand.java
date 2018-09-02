@@ -9,8 +9,13 @@ public class GarageDoorCloseCommand implements Command {
 
 	@Override
 	public void execute() {
-	garageDoor.close();
+		garageDoor.close();
 
+	}
+
+	@Override
+	public void undo() {
+		garageDoor.open();
 	}
 
 }

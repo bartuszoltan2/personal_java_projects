@@ -5,6 +5,19 @@ public class RemoteLoader {
 	public static void main(String[] args) {
 		RemoteControl remoteControl = new RemoteControl();
 		
+		
+		CeilingFan ceilingFan = new CeilingFan("Living Room");
+		
+		
+		
+		
+		
+		lightControl(remoteControl);
+		
+		
+	}
+
+	private static void lightControl(RemoteControl remoteControl) {
 		Light livingRoomLight = new Light ("Living Room");
 		Light kitchenLight = new Light ("Kitchen");
 		
@@ -18,15 +31,14 @@ public class RemoteLoader {
 		remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
 		remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
 		
-		System.out.println(remoteControl);
-		
 		remoteControl.onButtonWasPushed(0);
-		remoteControl.onButtonWasPushed(1);
-		System.out.println("--------");
-		remoteControl.offButtonWasPushed(1);
 		remoteControl.offButtonWasPushed(0);
-		
-		
+		System.out.println(remoteControl);
+		remoteControl.undoButtonWasPushed();
+		remoteControl.offButtonWasPushed(0);
+		remoteControl.onButtonWasPushed(0);
+		System.out.println(remoteControl);
+		remoteControl.undoButtonWasPushed();
 	}
 
 }
