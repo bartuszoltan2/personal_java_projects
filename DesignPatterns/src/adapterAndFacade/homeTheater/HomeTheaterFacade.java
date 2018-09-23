@@ -1,4 +1,6 @@
-package adapterAndFacade;
+package adapterAndFacade.homeTheater;
+
+import adapterAndFacade.Tuner;
 
 public class HomeTheaterFacade {
 	

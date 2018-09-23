@@ -1,4 +1,4 @@
-package adapterAndFacade;
+package adapterAndFacade.homeTheater;
 
 public class PopcornPopper {
 
