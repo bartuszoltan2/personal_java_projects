@@ -2,12 +2,12 @@ package iteratorComposite;
 
 import java.util.Iterator;
 
-public class DinerMenu {
+public class DinerMenu implements Menu{
 	static final int MAX_ITEMS = 6;
 	int numberOfItems = 0;
 	MenuItem[] menuItems;
 
-	public DinerMenu() {
+	public DinerMenu()  {
 		menuItems = new MenuItem[MAX_ITEMS];
 
 		addItem("Vegetarian BLT", "(Fakin') Bacon with lettuce & tomato on whole wheat", true, 2.99);
@@ -35,7 +35,7 @@ public class DinerMenu {
 //		return menuItems;
 //	}
 	
-	public Iterator createIterator() {
-		return (Iterator) new DinerMenuIterator(menuItems);
+	public Iterator<MenuItem> createIterator() {
+		return (Iterator<MenuItem>) new DinerMenuIterator(menuItems);
 	}
 }
