@@ -3,11 +3,12 @@ package iteratorComposite;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class CafeMenu implements Menu{
+public class CafeMenu extends Menu{
 
 	HashMap<String, MenuItem> menuItems = new HashMap<String, MenuItem>();
 
-	public CafeMenu() {
+	public CafeMenu(String name, String description) {
+		super(name, description);
 		addItem("Veggie Burger an Air Fries", "Veggie Burger on a whole wheat bun, lettuce, tomats and fires", true,
 				3.99);
 
@@ -22,7 +23,6 @@ public class CafeMenu implements Menu{
 		menuItems.put(menuItem.getName(), menuItem);
 	}
 
-	@Override
 	public Iterator<MenuItem> createIterator() {
 		return menuItems.values().iterator();
 	}

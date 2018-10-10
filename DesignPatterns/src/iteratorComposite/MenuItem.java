@@ -1,12 +1,12 @@
 package iteratorComposite;
 
-public class MenuItem {
-	
+public class MenuItem extends MenuComponent {
+
 	private String name;
 	private String description;
 	private boolean vegetarian;
 	private double price;
-	
+
 	public MenuItem(String name, String description, boolean vegetarian, double price) {
 		super();
 		this.setName(name);
@@ -46,7 +46,15 @@ public class MenuItem {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
-	
+
+	@Override
+	public void print() {
+		System.out.println(" " + getName());
+		if (isVegetarian()) {
+			System.out.println("(v)");
+		}
+		System.out.println(", " + getPrice());
+		System.out.println("   --" + getDescription());
+	}
 
 }

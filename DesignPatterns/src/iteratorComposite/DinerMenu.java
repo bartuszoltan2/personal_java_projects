@@ -2,12 +2,13 @@ package iteratorComposite;
 
 import java.util.Iterator;
 
-public class DinerMenu implements Menu{
+public class DinerMenu extends Menu{
 	static final int MAX_ITEMS = 6;
 	int numberOfItems = 0;
 	MenuItem[] menuItems;
 
-	public DinerMenu()  {
+	public DinerMenu(String name, String description)  {
+		super(name, description);
 		menuItems = new MenuItem[MAX_ITEMS];
 
 		addItem("Vegetarian BLT", "(Fakin') Bacon with lettuce & tomato on whole wheat", true, 2.99);
