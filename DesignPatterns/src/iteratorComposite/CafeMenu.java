@@ -23,8 +23,8 @@ public class CafeMenu extends Menu{
 		menuItems.put(menuItem.getName(), menuItem);
 	}
 
-	public Iterator<MenuItem> createIterator() {
-		return menuItems.values().iterator();
-	}
+//	public Iterator<MenuItem> createIterator() {
+//		return menuItems.values().iterator();
+//	}
 
 }

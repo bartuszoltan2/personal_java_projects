@@ -36,7 +36,7 @@ public class DinerMenu extends Menu{
 //		return menuItems;
 //	}
 	
-	public Iterator<MenuItem> createIterator() {
-		return (Iterator<MenuItem>) new DinerMenuIterator(menuItems);
-	}
+//	public Iterator<MenuItem> createIterator() {
+//		return (Iterator<MenuItem>) new DinerMenuIterator(menuItems);
+//	}
 }

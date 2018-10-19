@@ -1,5 +1,7 @@
 package iteratorComposite;
 
+import java.util.Iterator;
+
 public class MenuItem extends MenuComponent {
 
 	private String name;
@@ -55,6 +57,11 @@ public class MenuItem extends MenuComponent {
 		}
 		System.out.println(", " + getPrice());
 		System.out.println("   --" + getDescription());
+	}
+	
+	@SuppressWarnings("unchecked")
+	public Iterator<MenuComponent> createIterator() {
+		return new NullIterator();
 	}
 
 }
